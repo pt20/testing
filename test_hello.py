@@ -1,10 +1,8 @@
-import pytest
 from hello import print_hello_world 
 
 
-def test_print_hello_world(capsys):
-    captured = capsys.readouterr()
-    # expected = "hello world!"
+def test_print_hello_world():
+    expected = "hello world!"
     result = print_hello_world()
     
-    assert captured.out == result
+    assert expected == result
