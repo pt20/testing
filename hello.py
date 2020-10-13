@@ -1,2 +1,2 @@
-def print_hellow_world():
+def print_hello_world():
     print("hello world!")
