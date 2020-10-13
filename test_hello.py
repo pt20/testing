@@ -2,8 +2,9 @@ import pytest
 from hello import print_hello_world 
 
 
-def test_print_hello_world():
-    expected = "hello world!"
+def test_print_hello_world(capsys):
+    captured = capsys.readouterr()
+    # expected = "hello world!"
     result = print_hello_world()
     
-    assert expected == result
+    assert captured.out == result
